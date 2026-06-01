@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:14-alpine
+    container_name: artisans_hub_db
+    environment:
+      POSTGRES_DB: artisans_hub
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: artisans_hub_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - artisans_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: artisans_hub_api
+    environment:
+      NODE_ENV: development
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: artisans_hub
+      DB_USER: postgres
+      DB_PASSWORD: artisans_hub_password
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - artisans_network
+    command: npm run dev
+
+  redis:
+    image: redis:7-alpine
+    container_name: artisans_hub_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - artisans_network
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  artisans_network:
+    driver: bridge

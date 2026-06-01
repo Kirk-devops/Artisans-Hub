@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Artisans Hub",
+    "slug": "artisans-hub",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletOnly": false,
+      "bundleIdentifier": "com.artisanshub.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.artisanshub.mobile"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
