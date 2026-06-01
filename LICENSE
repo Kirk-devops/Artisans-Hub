@@ -1,0 +1,53 @@
+# License
+
+## PROPRIETARY SOFTWARE LICENSE
+
+**Copyright (c) 2026 Artisans Hub**
+
+All rights reserved.
+
+### Terms
+
+This software and associated documentation files (the "Software") are the exclusive property of Artisans Hub. The Software is provided under a proprietary license and may not be used, copied, modified, or distributed without explicit written permission from Artisans Hub.
+
+### Restricted Use
+
+You may NOT:
+- Copy, modify, or create derivative works of the Software
+- Distribute, sublicense, or transfer the Software
+- Reverse engineer, decompile, or disassemble the Software
+- Use the Software for any commercial purpose without authorization
+- Remove or alter copyright notices or proprietary markings
+
+### Permitted Use
+
+You may:
+- Use the Software for internal development purposes only
+- View the source code for understanding purposes
+- Contribute to the project via pull requests (contributions become property of Artisans Hub)
+
+### Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+### Limitation of Liability
+
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### Third-Party Licenses
+
+This Software includes components from:
+- Express.js (MIT License)
+- PostgreSQL (PostgreSQL License)
+- React Native (MIT License)
+- And other open-source libraries (see package.json)
+
+For detailed third-party license information, run: `npm license`
+
+### Contact
+
+For licensing inquiries: legal@artisanshub.gh
+
+---
+**License Version:** 1.0  
+**Effective Date:** June 1, 2026
